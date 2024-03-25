@@ -1,10 +1,10 @@
-# AISA
+# GISA
 
-our AISA will scan nearby drone and decode all the opendroneid packets instantly
+our GISA will scan nearby drone and decode all the opendroneid packets instantly
 
 
 Description of the program :
-->The AISA.py is the main python file  
+->The GISA.py is the main python file  
 The ODIDScanDelegate calss basically starts scanning all nearby bluetooth device .
 Opendroneid protocol broadcast packet comes with a 16b service data . and it starts
 with "faff" so There is a check that  if the value startswith("faff") then i use 
@@ -20,7 +20,7 @@ as well as also i use struck to get the accurate data.
 
 ->parse_packet is another funtion also for decode the 16b service packet data but using fromhex .
 
-->At the end i also use a logic to run the code as long as the raspverry pi in drone fly.
+->At the end i also use a logic to run the code as long as the raspperry pi in drone fly.
 
 
 Requirements >
@@ -31,17 +31,17 @@ installation steps >
 
 1. git clone the repository 
 
-2. Navigate to cloned repository "cd AISA"
+2. Navigate to cloned repository "cd GISA"
 
-3. run the program for AISA  command "sudo python3 AISA.py"
+3. run the program for AISA  command "sudo python3 GISA.py"
 
 -> To run the in every boot up of raspberry pi automattically the procedure is below 
 
 Create a shell script: First create a shell script that will run your Python script and open a terminal window. 
 Let's call it run_script.sh:
 
-xterm -e sudo python3 /path/to/AISA.py
-Replace /path/to/AISA.py with the actual path to your Python script.
+xterm -e sudo python3 /path/to/GISA.py
+Replace /path/to/GISA.py with the actual path to your Python script.
 
 Make script executable: Make the script executable by running:
 chmod +x run_script.sh
