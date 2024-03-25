@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Drone ID Scanner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+            <th>Field Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Message Counter</td>
+            <td>{{ data[0] }}</td>
+          </tr>
+          <tr>
+            <td>Message Type</td>
+            <td>{{ data[1] }}</td>
+          </tr>
+          <tr>
+            <td>Protocol Version</td>
+            <td>{{ data[2] }}</td>
+          </tr>
+          <tr>
+            <td>Operational Status</td>
+            <td>{{ 'Airborne' if data[3] == 2 else 'Not Airborne' }}</td>
+          </tr>
+          <tr>
+            <td>Height Type</td>
+            <td>{{ 'Above Takeoff' if data[4] == 0 else 'Above Ground Level' }}</td>
+          </tr>
+          <tr>
+            <td>East/West Direction</td>
+            <td>{{ data[5] }}</td>
+          </tr>
+          <tr>
+            <td>Speed Multiplier</td>
+            <td>{{ data[6] }}</td>
+          </tr>
+          <tr>
+            <td>Direction</td>
+            <td>{{ data[7] }}</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>{{ data[8] }}</td>
+          </tr>
+          <tr>
+            <td>Vertical Speed</td>
+            <td>{{ data[9] }}</td>
+          </tr>
+          <tr>
+            <td>Latitude</td>
+            <td>{{ data[10] }}</td>
+          </tr>
+          <tr>
+            <td>Longitude</td>
+            <td>{{ data[11] }}</td>
+          </tr>
+          <tr>
+            <td>Uncertainty Altitude</td>
+            <td>{{ data[12] }}</td>
+          </tr>
+          <tr>
+            <td>Geodetic Altitude</td>
+            <td>{{ data[13] }}</td>
+          </tr>
+          <tr>
+            <td>Geodetic Height Above Ellipsoid</td>
+            <td>{{ data[14] }}</td>
+          </tr>
+          <tr>
+            <td>Horizontal Accuracy</td>
+            <td>{{ data[15] }}</td>
+          </tr>
+          <tr>
+            <td>Vertical Accuracy</td>
+            <td>{{ data[16] }}</td>
+          </tr>
+          <tr>
+            <td>Baro Accuracy</td>
+            <td>{{ data[17] }}</td>
+          </tr>
+          <tr>
+            <td>Speed Accuracy</td>
+            <td>{{ data[18] }}</td>
+          </tr>
+          <tr>
+            <td>Timestamp</td>
+            <td>{{ data[19] }}</td>
+          </tr>
+          <tr>
+            <td>Reserved</td>
+            <td>{{ data[20] }}</td>
+          </tr>
+          <tr>
+            <td>Timestamp Accuracy</td>
+            <td>{{ data[21] }}</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>
